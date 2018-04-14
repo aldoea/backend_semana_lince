@@ -78,8 +78,11 @@ WSGI_APPLICATION = 'sl.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': os.getenv('SL_DB_NAME', 'SL'),
+        'HOST': os.getenv('SL_DB_HOST', 'SL'),
+        'USER': os.getenv('SL_DB_USER', 'SL'),
+        'PASSWORD': os.getenv('SL_DB_PASS', 'SL')
     }
 }
 
