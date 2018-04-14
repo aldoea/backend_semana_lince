@@ -79,8 +79,9 @@ WSGI_APPLICATION = 'sl.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': os.getenv('SL_DB_NAME', 'SL'),
-        'HOST': os.getenv('SL_DB_HOST', 'SL'),
+        'NAME': os.getenv('SL_DB_NAME', 'semanalince'),
+        'HOST': os.getenv('SL_DB_HOST', 'localhost'),
+        'PORT': os.getenv('SL_DB_PORT', '5432'),
         'USER': os.getenv('SL_DB_USER', 'SL'),
         'PASSWORD': os.getenv('SL_DB_PASS', 'SL')
     }
