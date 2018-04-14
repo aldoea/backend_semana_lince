@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'sl.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'django.db.backends.postgresql',
         'NAME': os.getenv('SL_DB_NAME', 'SL'),
         'HOST': os.getenv('SL_DB_HOST', 'SL'),
         'USER': os.getenv('SL_DB_USER', 'SL'),
