@@ -25,7 +25,7 @@ router = DefaultRouter()
 router.register(r'activities', views.ActivityViewSet)
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    url(r'^v1/auth/login/', obtain_jwt_token),
-    url(r'', include(router.urls))
+    path('api/admin/', admin.site.urls),
+    url(r'^api/auth/login/', obtain_jwt_token),
+    url(r'^api/', include(router.urls))
 ]
